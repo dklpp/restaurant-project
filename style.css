@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    font-family: 'Tinos', serif;
+    background-color: #F4E4C3;
+}
+
+.container {
+    margin: 0px 40px;
+}
+
+.header {
+    background-image: url(images/background.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-line {
+    padding-top: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-name {
+    color: white;
+    font-size: 40px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: color 0.3s linear;
+}
+
+.nav-item:hover {
+    color: #FB7123;
+}
+
+.cart {
+    position: relative;
+    border-right: 2px solid #FFFFFF;
+    padding-right: 10px;
+    height: 50px;
+}
+
+.cart-image {
+    position: absolute;
+    top: 10px;
+    right: 7px;
+    padding-left: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.num {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s linear;
+}
+
+.num:hover {
+    color: #FB7123;
+}
+
+.phone-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.phone-pos {
+    display: flex;
+    align-items: center;
+}
+
+.phone-img {
+    padding-right: 5px;
+}
+
+.book-a-table {
+    background-color: #FF0000;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: 700;
+    transition: background-color 0.2s linear;
+    border-radius: 10px;
+}
+
+.book-a-table:hover {
+    background-color: #9E0404;
+}
+
+.header-down {
+    position: relative;
+}
+
+.header-title {
+    position: absolute;
+    left: 153px;
+    line-height: 46px;
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 215px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 20px;
+}
+
+.subtitle:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 61px;
+    background-color: white;
+    top: 115px;
+    left: 38px;
+}
+
+.subtitle:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 61px;
+    background-color: white;
+    top: 115px;
+    left: 350px;
+}
+
+.header-button {
+    background-color: #FF0000;
+    padding: 14px 28px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+    border-radius: 10px;
+
+}
+
+.header-button:hover {
+    background-color: #9E0404;
+}
+
+.blocks-holder {
+    display: flex;
+    justify-content: center;
+}
+
+.block {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 31px;
+    background-color: #fff;
+    margin-top: -40px;
+    padding: 10px 10px;
+}
+
+.block-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.block-img {
+    width: 50px;
+    height: 50px;
+}
+
+.block-head {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.block-head span {
+    color: #FB7123;
+}
+
+.block-text {
+    text-align: center;
+    font-size: 22px;
+    color: rgb(60, 60, 60);
+}
+
+.container-1 {
+    margin: 0px 0px;
+}
+
+
+.intro {
+    margin-top: 234px;
+    margin-left: 200px;
+}
+
+.intro-title {
+    font-size: 55px;
+    width: 519px;
+    text-align: center;
+    margin-top: 21px;
+}
+
+.intro-title span {
+    color: #FB7123;
+}
+
+.intro-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    width: 519px;
+    text-align: center;
+    margin-top: 21px;
+
+}
+
+.intro-btn {
+    width: 519px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intro-button {
+    background-color: #FF0000;
+    padding: 14px 28px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+    border-radius: 10px;
+
+}
+
+.intro-button:hover {
+    background-color: #9E0404;
+}
+
+.intro-holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-img {
+    margin-top: -170px;
+}
+
+.image {
+    height: 650px;
+    width: 550px;
+}
