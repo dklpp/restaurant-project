@@ -205,6 +205,7 @@ body {
 .intro {
     margin-top: 234px;
     margin-left: 200px;
+    padding-bottom: 100px;
 }
 
 .intro-title {
@@ -257,9 +258,63 @@ body {
 
 .history-img {
     margin-top: -170px;
+    padding: 155px 0px;
 }
 
 .image {
     height: 650px;
     width: 550px;
+}
+
+.black-block {
+    background-image: url(images/black-bg-2.png);
+    padding: 80px 0;
+    
+}
+
+.left-title {
+    color: #FB7123;
+    font-size: 40px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.left-text {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.right-btn {
+    background-color: #FF0000;
+    padding: 14px 28px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+    border-radius: 10px;
+}
+
+.right-btn:hover {
+    background-color: #9E0404;
+}
+
+.block-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-title {
+    font-family: 'Tinos', serif;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 110px;
+}
+
+.menu-title span {
+    color: #FB7123;
 }
