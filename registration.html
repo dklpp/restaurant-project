@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Menu</title>
+    <title>Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="signup.css">
@@ -14,7 +14,6 @@
 <body>
     <div class="container">
         <div class="title">Sign Up</div>
-
         <form action="#">
             <div class="user-details">
                 <div class="input-box">
@@ -35,19 +34,21 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input type="text" placeholder="Enter your password" required>
+                    <input type="password" placeholder="Enter your password" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input type="text" placeholder="Confirm password" required>
-                </div>
-                <div class="button">
-                    <input type="submit" value="CREATE AN ACCOUNT">
+                    <input type="password" placeholder="Confirm password" required>
                 </div>
             </div>
+            <div class="text">
+                Already have an account? <a class="login" href="#">Login</a>
+            </div>
+            <div class="button">
+                <input type="submit" value="CREATE AN ACCOUNT">
+            </div>
+        </form>
     </div>
-    </form>
-
 </body>
 
 </html>
