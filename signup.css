@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Tinos', serif;
@@ -6,8 +12,9 @@ body {
     background-size: cover;
     display: flex;
     height: 100vh;
-    margin-left: 50px;
+
     align-items: center;
+    justify-content: center;
     padding: 10px;
 }
 
@@ -24,6 +31,7 @@ body {
     font-weight: 500;
     position: relative;
     padding-bottom: 5px;
+    position: relative;
 }
 
 .container .title::before {
@@ -40,12 +48,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px 0 12px 0;
+    margin: 15px 0 12px 0;
 }
 
 form .user-details .input-box {
     margin-bottom: 15px;
-    margin-right: 10px;
+    margin-right: 8px;
     width: calc(100% / 2 - 20px);
 }
 
@@ -73,15 +81,30 @@ form .user-details .input-box {
 
 }
 
+.text {
+    font-size: 15px;
+
+}
+
+.login {
+    text-decoration: none;
+    color: #FB7123;
+    font-weight: 700;
+}
+
+.login:hover {
+    color: red;
+}
+
 form .button {
-    height: 50px;
-    margin: 20px 0;
-    padding-left: 240px;
+    height: 45px;
+    margin: 45px 0;
 }
 
 form .button input {
     height: 100%;
     width: 100%;
+    margin: 10px 10px;
     outline: none;
     color: #fff;
     border: none;
