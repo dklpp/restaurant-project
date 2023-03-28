@@ -27,21 +27,12 @@ body {
 }
 
 .container .title {
+    text-align: center;
     font-size: 35px;
     font-weight: 500;
     position: relative;
     padding-bottom: 5px;
     position: relative;
-}
-
-.container .title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 117px;
-    background: #8d5e29;
 }
 
 .container form .user-details {
