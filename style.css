@@ -224,7 +224,6 @@ body {
     width: 519px;
     text-align: center;
     margin-top: 21px;
-
 }
 
 .intro-btn {
@@ -252,6 +251,7 @@ body {
 .intro-holder {
     display: flex;
     justify-content: space-between;
+
 }
 
 .history-img {
@@ -331,16 +331,16 @@ body {
 }
 
 .food {
-    margin-right: 0px;
+    text-align: center;
+    width: 33%;
 }
 
 .food-middle {
-    margin-right: 169px;
-    margin-left: 169px;
+    margin-right: 100px;
+    margin-left: 100px;
 }
 
 .menu-image {
-    display: flex;
     justify-content: center;
     text-align: center;
 }
@@ -349,10 +349,193 @@ body {
     height: 270px;
     width: 270px;
     border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.menu-img:hover {
+    transform: scale(1.2);
+}
+
+
+.menu-image {
+    position: relative;
 }
 
 .description {
     font-weight: 400;
     font-size: 20px;
+    padding-top: 23px;
+}
+
+.all-menu {
+    text-align: center;
+    padding-top: 100px;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.text {
+    color: black;
+}
+
+
+.comment {
+    margin-top: 120px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #FF9F76;
+    width: 100%;
+}
+
+.comment-one {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.image-1 {
+    width: 70px;
+    height: 70px;
+}
+
+.comment-human {
+    text-align: center;
+}
+
+.subcomment {
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+
+.subsubcomment {
     padding-top: 10px;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.order-holder {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.order-header {
+    margin-top: 140px;
+    width: 421px;
+    height: 511px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.order-head {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    padding-bottom: 43px;
+}
+
+.subhead {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    padding-bottom: 43px;
+
+}
+
+.pick-up {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FB7123;
+    padding-bottom: 18px;
+
+}
+
+.order-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    padding-bottom: 43px;
+}
+
+.bolt-food {
+    text-decoration: none;
+    color: rgb(28, 187, 28);
+    font-weight: 600;
+    transition: color 0.3s linear;
+}
+
+.bolt-food:hover {
+    color: rgb(65, 100, 30);
+}
+
+.order-btn {
+    background-color: #FB7123;
+    padding: 10px 24px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+    border-radius: 10px;
+}
+
+.order-btn:hover {
+    background-color: #D94E00;
+}
+
+.order-img {
+    width: 600px;
+    height: 704px;
+    padding-bottom: 0;
+}
+
+.footer {
+    background-color: black;
+    width: 100%;
+    height: 250px;
+    justify-content: space-between;
+}
+
+.links {
+    padding-top: 36px;
+    margin-left: 20px;
+    list-style: none;
+    height: 167px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+}
+
+.link {
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: color 0.3s linear;
+}
+
+
+.link:hover {
+    color: #FB7123;
+}
+
+.socials {
+    margin-left: 20px;
+}
+
+.social {
+    margin-right: 10px;
+}
+
+.social-link {
+    text-decoration: none;
 }
