@@ -539,3 +539,14 @@ body {
 .social-link {
     text-decoration: none;
 }
+
+@media (max-width: 1500px) {
+    .menu-items {
+        display: block;
+    }
+
+    .food-middle {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
