@@ -83,13 +83,13 @@ form .user-details .input-box {
     font-weight: 700;
 }
 
-.login:hover {
-    color: red;
-}
-
 form .button {
     height: 45px;
     margin: 45px 0;
+}
+
+.login:hover {
+    color: red;
 }
 
 form .button input {
