@@ -336,11 +336,6 @@ body {
     width: 33%;
 }
 
-.food-middle {
-    margin-right: 100px;
-    margin-left: 100px;
-}
-
 .menu-image {
     justify-content: center;
     text-align: center;
@@ -365,7 +360,7 @@ body {
 .description {
     font-weight: 400;
     font-size: 20px;
-    padding-top: 23px;
+    padding-top: 27px;
 }
 
 .all-menu {
@@ -541,13 +536,106 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 1500px) {
+.burger-menu {
+    display: none;
+}
+
+@media (max-width: 1300px) {
     .menu-items {
         display: block;
     }
 
-    .food-middle {
-        margin-right: 0px;
-        margin-left: 0px;
+    .food {
+        margin: 20px auto;
+    }
+
+    .header-title {
+        position: static;
+    }
+
+    .subtitle:before,
+    .subtitle:after {
+        content: none;
+    }
+
+    .block-holder {
+        display: block;
+    }
+
+    .left-title,
+    .left-text,
+    .right {
+        text-align: center;
+    }
+
+    .right {
+        margin-top: 30px;
+    }
+
+    .history-img {
+        display: none;
+    }
+
+    .intro-title,
+    .intro-text,
+    .intro-btn {
+        width: auto;
+
+    }
+
+    .intro {
+        margin: 100px 100px;
+    }
+
+    .intro-info {
+        margin: 20px auto;
+    }
+
+    .order-image {
+        display: none;
+    }
+
+    .order-header {
+        padding-top: 50px;
+        margin: 20px auto;
+    }
+
+    .order-head,
+    .subhead,
+    .pick-up,
+    .order-text,
+    .order-button {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 1185px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav,
+    .nav-item,
+    .cart,
+    .phone,
+    .btn {
+        display: none;
+    }
+
+    .header-line {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1000px) {
+    .blocks-holder {
+        display: block;
+    }
+
+    .block {
+        width: 100%;
+        margin-top: 30px;
+        padding-bottom: 20px;
     }
 }
