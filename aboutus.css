@@ -82,6 +82,18 @@ img:hover {
     line-height: 1.5;
 }
 
+#map {
+    /*height: 400px;
+    width: 100%;
+    max-width: 600px;*/
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+
+
 @media screen and (max-width: 768px) {
     .head {
         padding: 0px 20px;
