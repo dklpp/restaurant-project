@@ -86,13 +86,26 @@ img:hover {
     /*height: 400px;
     width: 100%;
     max-width: 600px;*/
-    height: 400px;
+    height: 500px;
     width: 80%;
     margin: 0 auto;
     padding: 70px 20px;
 }
 
+.text {
+    text-align: center;
+    font-size: 35px;
+    text-decoration: underline;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
 
+.address {
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
 
 @media screen and (max-width: 768px) {
     .head {
