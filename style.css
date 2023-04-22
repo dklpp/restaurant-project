@@ -519,7 +519,6 @@ body {
     transition: color 0.3s linear;
 }
 
-
 .link:hover {
     color: #FB7123;
 }
@@ -537,6 +536,24 @@ body {
 }
 
 .burger-menu {
+    display: none;
+}
+
+.blocks {
+    display: block;
+}
+
+.bg-slide {
+    position: absolute;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.disp {
     display: none;
 }
 
@@ -616,7 +633,6 @@ body {
     }
 
     .nav,
-    .nav-item,
     .cart,
     .phone,
     .btn {
