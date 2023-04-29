@@ -23,9 +23,14 @@ $password = $_POST['password'];
     exit();
 }*/
 
+//$password = md5($password); //hash of password
+
 $mysql = new mysqli('localhost', 'itech174', 'Fe7@bwZWgAqV', 'itech174');
-$mysql->query("INSERT INTO `users` ( `name`, `surname`, `phone_num`, `email`, `password`)
+$mysql->query("INSERT INTO `users` (`name`, `surname`, `phone_num`, `email`, `password`)
 VALUES('$name', '$surname', '$phone_num', '$email', '$password')");
 
 $mysql->close();
+
+header('Location: /');
+
 ?>
