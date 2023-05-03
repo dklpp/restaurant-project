@@ -12,10 +12,8 @@
         exit();
     }
     setcookie('user', $user['name'], time() + 3600, "/");
- 
-    
 
-    $mysql->close();
+    $mysql->close(); 
 
     header('Location: /');
 ?>
