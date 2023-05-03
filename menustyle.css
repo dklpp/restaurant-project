@@ -35,6 +35,18 @@ body {
     width: 35px;
 }
 
+.link {
+    text-decoration: none;
+
+}
+
+.number {
+    text-decoration: none;
+    color: #FB7123;
+    font-weight: 700;
+    font-size: 20px;
+}
+
 .small-cart-image {
     height: 20px;
     width: 16px;
