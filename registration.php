@@ -1,36 +1,63 @@
 <?php 
 $name = $_POST['name'];
-/*filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);*/
 $surname = $_POST['surname']; 
 $phone_num = $_POST['phone_num'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-/*if(mb_strlen($name) < 2 || mb_strlen($name) > 50) {
-    echo "Unacceptable length of name!";
-    exit();
-} else if (mb_strlen($surname) < 2 || mb_strlen($surname) > 50){
-    echo "Unacceptable length of surname!";
-    exit();
-} else if (mb_strlen($phone_num) < 2 || mb_strlen($phone_num) > 20){
-    echo "Unacceptable length of phone number!";
-    exit();
-} else if (mb_strlen($email) < 2 || mb_strlen($email) > 20) {
-    echo "Unacceptable length of email!";
-    exit();
-} else if (mb_strlen($password) < 2 || mb_strlen($password) > 20){
-    echo "Unacceptable length of , password must be AT LEAST 4 characters and AT MAXIMUM 12!";
-    exit();
-}*/
+if (empty($name)){
+    die("Name is required");
+}
+if (empty($surname)){
+    die("Surname is required");
+}
+if (empty($phone_num)){
+    die("Phone number is required");
+}
+if (! filter_var($email, FILTER_VALIDATE_EMAIL)){
+    die(" Valid email is required");
+}
+if(strlen($password) < 4) {
+    die("Password must be at least 4 characters");
+}
+if( ! preg_match("/[a-z]/i", $password)){
+    die("Password must contain at least one letter");
+}
+if( ! preg_match("/[0-9]/",  $password)){
+    die("Password must contain at least one number");
+}
+if($_POST["password"] !== $_POST["password_confirmation"]){
+    die("Password must match");
+}
+$password = password_hash($_POST["password"], PASSWORD_DEFAULT); //hash of password
+$mysqli = new mysqli('localhost', 'itech174', 'Fe7@bwZWgAqV', 'itech174');
 
-//$password = md5($password); //hash of password
+$sql = "INSERT INTO users (name, surname, phone_num, email, password_hash)
+ VALUES(?, ?, ?, ?, ?)";
 
-$mysql = new mysqli('localhost', 'itech174', 'Fe7@bwZWgAqV', 'itech174');
-$mysql->query("INSERT INTO `users` (`name`, `surname`, `phone_num`, `email`, `password`)
-VALUES('$name', '$surname', '$phone_num', '$email', '$password')");
+ $stmt = $mysqli->stmt_init();
+ if(! $stmt->prepare($sql)){
+    die("SQL error: " . $mysqli->error);
+ }
 
-$mysql->close();
+$stmt->bind_param("sssss",$name, $surname, $phone_num, $email, $password);
 
-header('Location: /');
+if($stmt->execute()){
+    header("Location: signup-success.html");
+    exit();
+} else {
+    if($mysqli->errno === 1062) {
+        die("Email already taken");
+    }
+    die($mysqli->error. " " . $mysqli->errno);
+}
+
+
+/*$mysql->query("INSERT INTO `users` (`name`, `surname`, `phone_num`, `email`, `password_hash`)
+VALUES('$name', '$surname', '$phone_num', '$email', '$password')");*/
+
+//$mysql->close();
+
+
 
 ?>
