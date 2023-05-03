@@ -74,6 +74,7 @@ form .user-details .input-box {
 }
 
 .signup {
+    margin-top: 7px;
     text-decoration: none;
     color: #FB7123;
     font-weight: 700;
