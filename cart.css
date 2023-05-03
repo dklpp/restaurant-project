@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #F4E4C3;
+    font-family: 'Tinos', serif;
+}
+
 .product-container {
     max-width: 650px;
     justify-content: space-around;
