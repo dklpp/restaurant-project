@@ -14,41 +14,44 @@
 <body>
     <div class="container">
         <div class="title">Sign Up</div>
-        <form action="registration.php" method="post">
+        <form action="registration.php" method="post" id="signup" novalidate>
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Name</span>
-                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
                 </div>
                 <div class="input-box">
                     <span class="details">Surname</span>
-                    <input type="text" name="surname" placeholder="Enter your surname" required>
+                    <input type="text" id="surname" name="surname" placeholder="Enter your surname">
                 </div>
                 <div class="input-box">
                     <span class="details">Phone number</span>
-                    <input type="text" name="phone_num" placeholder="Enter your phone number" required>
+                    <input type="text" id="phone_num" name="phone_num" placeholder="Enter your phone number">
                 </div>
                 <div class="input-box">
                     <span class="details">Email Address</span>
-                    <input type="text" name="email" placeholder="Enter your email" required>
+                    <input type="text" id="email" name="email" placeholder="Enter your email">
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input type="password" name="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
                 </div>
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input type="password" name="password" placeholder="Confirm password" required>
+                    <input type="password" id="password_confirmation" name="password_confirmation"
+                        placeholder="Confirm password">
                 </div>
             </div>
             <div class="text">
-                Already have an account? <a class="login" href="login.html">Login</a>
+                Already have an account? <a class="login" href="login.php">Login</a>
             </div>
             <div class="button">
                 <input type="submit" value="CREATE AN ACCOUNT">
             </div>
         </form>
     </div>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <script src="validate.js" defer></script>
 </body>
 
 </html>
