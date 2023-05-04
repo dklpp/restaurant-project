@@ -1,0 +1,16 @@
+{
+  "name": "restaurant-project",
+  "version": "1.0.0",
+  "description": "всем привет севодня мы будем создавать ристоран сайта ставьте лайки если хотите чтобы ми сделали джаваскрибт",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
