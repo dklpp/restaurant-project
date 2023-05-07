@@ -29,23 +29,24 @@ if (isset($_SESSION["user_id"])) {
             text-align: center;
         }
 
-        .link, .links {
-            text-decoration: underline;
+        .link {
+            text-decoration: none;
             color: rgb(255, 140, 0);
         }
 
-        .link_logout{
-            text-decoration: underline;
-            color: red;
+        .links{
+            text-decoration: none;
+            color: yellow;
         }
+
+
     </style>
 </head>
 <body>
     <?php if (isset($_SESSION["user_id"])): ?>
         <h1>You are logged in.<br>
             Go to <a class = "link" href="index.php"> Main Page</a><br>
-            <a class = "link_logout" href="index.php"> Log Out </a><br>
-            <a class="links" href="signup.html">Delete Your Account</a></h1>
+            <a class="links" href="profile.php">Your profile</a></h1>
         </h1>
     <?php else: ?>
         <h1><a class="links" href="login.php">Log In</a><br>
