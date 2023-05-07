@@ -34,12 +34,26 @@ if (isset($_SESSION["user_id"])) {
         <div class = "navigation">
             <h3> Go to <a class = "link" href="index.php"> Main Page</a></br>
                 <a class = "link" href="recipes-api.html">Check the best recipes</a></br>
-                <a class = "link_logout" href="index.php"> Log Out </a></br>
+                <a class = "link" href="weather.html">Check the weather</a></br>
+                <a class = "link" href="password-reset.html"> Change Password </a></br>
+                <a class = "link_logout" href="logout.php"> Log Out </a></br>
                 <a class="delete-account" href="delete-account.html">Delete your account</a>
             </h3>
         </div>
+        <div class="form-container">
+            <form>
+                <div class="input-box">
+                    <textarea class="window" id="text" name="text" placeholder="Enter your text"></textarea>
+                </div>
+                <div class="submit-button">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <?php endif;?>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@grammarly/editor-sdk?clientId=client_NdKLhtFEgSGzYjTURFzGco"></script>
 </body>
 
 </html>
