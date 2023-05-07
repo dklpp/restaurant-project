@@ -16,7 +16,7 @@ let products = [
     {
         name: 'Mozzarella Sticks',
         tag: 'MozzarellaSticks',
-        price: 9.00,
+        price: 9,
         inCart: 0
     },
     {
