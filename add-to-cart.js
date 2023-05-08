@@ -56,18 +56,24 @@ function onLoadCartNumbers() {
     }
 }
 
-function cartNumbers(product) {
-
+function cartNumbers(product, action) {
     let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
-    if (productNumbers) {
-        localStorage.setItem('cartNumbers', productNumbers + 1);
+
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if (action) {
+        localStorage.setItem("cartNumbers", productNumbers - 1);
+        document.querySelector('.cart .link span').textContent = productNumbers - 1;
+        console.log("action running");
+    } else if (productNumbers) {
+        localStorage.setItem("cartNumbers", productNumbers + 1);
         document.querySelector('.cart .link span').textContent = productNumbers + 1;
     } else {
-        localStorage.setItem('cartNumbers', 1);
+        localStorage.setItem("cartNumbers", 1);
         document.querySelector('.cart .link span').textContent = 1;
     }
-
     setItems(product);
 }
 
