@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Sign Up</title>
+    <title>Book a table</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bookatable.css">
@@ -14,31 +14,31 @@
 <body>
     <div class="container">
         <div class="title">Book A Table</div>
-        <form action="#">
+        <form action="bookatable.php" method="post" id="bookatable" novalidate>
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Name</span>
-                    <input type="text" placeholder="Enter your name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Surname</span>
-                    <input type="text" placeholder="Enter your surname" required>
+                    <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Phone number</span>
-                    <input type="text" placeholder="Enter your phone number" required>
+                    <input type="text" id="phone_num" name="phone_num" placeholder="Enter your phone number" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Number of seats</span>
-                    <input type="text" placeholder="Enter the number of seats" required>
+                    <input type="text" id="seats_num" name="seats_num" placeholder="Enter the number of seats" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Date</span>
-                    <input type="date" placeholder="Enter a date for a reservation" required>
+                    <input type="date" id="date" name="date" placeholder="Enter a date for a reservation" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Time </span>
-                    <input type="time" placeholder="Enter time for a reservation" required>
+                    <input type="time" id="time" name="time" placeholder="Enter time for a reservation" required>
                 </div>
             </div>
             <div class="button">
