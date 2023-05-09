@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="btn">
-                    <a class="book-a-table" href="#">BOOK A TABLE</a>
+                    <a class="book-a-table" href="bookatable.html">BOOK A TABLE</a>
                 </div>
                 <div class="burger-menu">
                     <button id="burger">
