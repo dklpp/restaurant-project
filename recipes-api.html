@@ -39,6 +39,7 @@
             margin-right: -20px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script src="script-recipe-api.js" defer></script>
 </head>
 
@@ -49,6 +50,81 @@
         <button id="search">Search</button>
     </div>
     <div id="content" class="recipe-container"></div>
+
+    <script>
+        let searchButton = document.querySelector("#search"); //select html id=search
+        let searchTermInput = document.querySelector("#searchTerm");
+
+        searchButton.addEventListener("click", () => { //add action
+            console.log("button pressed");
+            sendApiRequest();
+        })
+
+        async function sendApiRequest() {
+            let APP_ID = "098085f0";
+            let API_KEY = "b820718927635b860b5c289f4567a5ff";
+            let searchTerm = searchTermInput.value; // Get the value from the input field
+            let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${searchTerm}`);
+            let data = await response.json();
+            console.log(data);
+            useApiData(data);
+        }
+
+        function useApiData(data) {
+            let recipes = data.hits; // Get all the recipes from the API response
+            let content = document.querySelector("#content");
+            content.innerHTML = ''; // Clear previous results
+
+            recipes.forEach(recipe => {
+                let recipeCard = document.createElement('div');
+                recipeCard.classList.add('recipe-card');
+                recipeCard.style.width = '18rem';
+                recipeCard.innerHTML = `
+                    <img class="card-img-top" src="${recipe.recipe.image}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">${recipe.recipe.label}</h5>
+                        <p class="card-text">${recipe.recipe.source}</p>
+                        <a href="${recipe.recipe.url}" class="btn btn-primary">Check the recipe</a>
+                        <button class="btn btn-primary save-recipe" data-name="${recipe.recipe.label}" data-url="${recipe.recipe.url}">Save the recipe</button>
+                    </div>
+                `;
+
+                content.appendChild(recipeCard);
+            });
+
+            // Add event listeners to save recipe buttons
+            let saveButtons = document.querySelectorAll('.save-recipe');
+            saveButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    let name = button.getAttribute('data-name');
+                    let url = button.getAttribute('data-url');
+                    saveRecipe(name, url);
+                });
+            });
+        }
+
+        function saveRecipe(name, url) {
+            let data = {
+                name: name,
+                url: url
+            };
+
+            // Send the data to the server using AJAX
+            $.ajax({
+                type: "POST",
+                url: "save-recipe.php",
+                data: data,
+                success: function (response) {
+                    console.log(response);
+                    // Handle the response from the server
+                },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                    // Handle any errors that occur during the AJAX request
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
