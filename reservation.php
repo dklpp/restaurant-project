@@ -30,9 +30,9 @@ if (isset($_SESSION["user_id_booking"])) {
     <?php if(isset($user)): ?>
         <div class="welcoming">Hello <?= htmlspecialchars($user["name"]) ?>, your reservation time: <?= htmlspecialchars($user["date"]) ?> <?= htmlspecialchars($user["time"]) ?> </h1>
         <div class = "navigation">
-            <h3> Go to <a class = "link" href="index.php"> Main Page</a></br>
+            <h3> Go to <a class = "link" href="booking-off.php"> Main Page</a></br>
                 <a class = "link" href="booking-reset.html"> Change Details </a></br>
-                <a class = "link_logout" href="booking-off.php"> Go to Main Page </a></br>
+                <!-- <a class = "link_logout" href="booking-off.php"> Go to Main Page </a></br> -->
                 <a class="delete-account" href="delete-booking.html">Delete your booking</a>
             </h3>
         </div>
