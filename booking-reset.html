@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Change booking details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="password-reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Change Booking Details</div>
+        <form action="booking-reset.php" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Email Address</span>
+                    <input type="text" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <!-- <div class="input-box">
+                    <span class="details">Current Password</span>
+                    <input type="password" id="current_password" name="current_password"
+                        placeholder="Enter your password">
+                </div> -->
+                <div class="input-box">
+                    <span class="details">New Date</span>
+                    <input type="date" id="new_date" name="new_date" placeholder="Enter new date">
+                </div>
+                <div class="input-box">
+                    <span class="details">New Time</span>
+                    <input type="time" id="new_time" name="new_time" placeholder="Enter new time">
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Change Details">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
