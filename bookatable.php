@@ -1,5 +1,5 @@
 <?php 
-print_r($_POST);
+// print_r($_POST);
 $name = $_POST['name']; // retrieve the values
 $email = $_POST['email']; 
 $phone_num = $_POST['phone_num'];
